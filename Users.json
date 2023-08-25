@@ -1,1 +1,33 @@
-{}
+{
+  "mark11": {
+    "userID": "92bfee10-7953-405e-848f-ede96f05371d",
+    "userName": "mark11",
+    "displayName": "mark11",
+    "todoItems": [
+      {
+        "id": 260093659502,
+        "name": "Test todo item",
+        "description": "This is a test todo item",
+        "category": {
+          "id": 0,
+          "value": "unknown",
+          "label": "No category"
+        },
+        "date": {
+          "date": "2099-09-29",
+          "allDay": false,
+          "time": "12:23"
+        },
+        "importance": {
+          "name": "Low",
+          "value": 0,
+          "displayName": "Not urgent",
+          "accentColor": "#0A4B0A",
+          "onHoverText": "Low level importance grade"
+        },
+        "isCompleted": false
+      }
+    ],
+    "password": "$2b$10$jq2NrIT9Gd0KGrYS8h2Do.gmQGklsfk3HSiBUvoD5pRdN7UK26KiC"
+  }
+}

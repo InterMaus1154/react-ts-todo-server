@@ -45,8 +45,9 @@ io.on("connection", socket=>{
         const hash = bcrypt.hashSync(data.password, 10);
         const user = {
             userID: crypto.randomUUID(),
-            userName: data.user.username,
+            userName: data.user.username.trim().toLowerCase(),
             displayName: data.user.userDisplayName,
+            todoItems: [],
             password: hash
         };
 
@@ -65,7 +66,7 @@ io.on("connection", socket=>{
 
     socket.off("request_user_auth", ()=>{}).on("request_user_auth", data =>{
         
-        const username = data.username.toLowerCase();
+        const username = data.username.trim().toLowerCase();
         const existingUsersList = JSON.parse(fs.readFileSync("./UserList.json", "utf-8"));
 
         const isUserExist = existingUsersList.includes(username);
@@ -75,7 +76,8 @@ io.on("connection", socket=>{
             const hashedPassword = existingUsers[username].password;
             const user = {
                 username: existingUsers[username].userName,
-                displayname: existingUsers[username].displayName
+                displayname: existingUsers[username].displayName,
+                userTodoItems: existingUsers[username].todoItems
             };
             const isUserAuthorised = bcrypt.compareSync(data.password, hashedPassword);
             socket.emit("user_auth_response", {isUserExist: existingUsersList.includes(username), isUserAuthorised: isUserAuthorised, user: user});
@@ -83,7 +85,22 @@ io.on("connection", socket=>{
             socket.emit("user_auth_response", {isUserExist: existingUsersList.includes(username)});
         }
         
-    
     }); 
+
+    socket.off("save_todo_items", ()=>{}).on("save_todo_items", data=>{
+        const username = data.username;
+        const items = data.todoItems;
+
+        const users = JSON.parse(fs.readFileSync("./Users.json", "utf8"));
+        const user = users[username];
+        user.todoItems = items; 
+
+        delete users[username];
+        const newUsers = {...users, [username]: user};
+
+        fs.writeFileSync("./Users.json", JSON.stringify(newUsers, null, 2)); 
+
+        
+    });
 
 });
