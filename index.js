@@ -21,9 +21,12 @@ const io = new Server(httpServer, {
     }
 });
 
-httpServer.listen(3001, ()=>{
-    console.log("Server is running")
-
+app.get("/*", (req, res) => {
+    res.sendFile(path.join(__dirname,"dist/index.html"), err =>{
+        if(err){
+            res.status(500).send(err);
+        }
+    });
 });
 
 io.on("connection", socket=>{
@@ -102,5 +105,10 @@ io.on("connection", socket=>{
 
         
     });
+
+});
+
+httpServer.listen(3001, ()=>{
+    console.log("Server is running")
 
 });
