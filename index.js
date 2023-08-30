@@ -24,7 +24,8 @@ const io = new Server(httpServer, {
 });
 
 app.get("/*", (req, res) => {
-    res.sendFile(path.join(__dirname,"/index.html"), err =>{
+    console.log(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname,"dist/index.html"), err =>{
         if(err){
             res.status(500).send(err);
         }
@@ -53,6 +54,7 @@ io.on("connection", socket=>{
             userName: data.user.username.trim().toLowerCase(),
             displayName: data.user.userDisplayName,
             todoItems: [],
+            userSettings: data.user.userSettings,
             password: hash
         };
 
@@ -82,7 +84,8 @@ io.on("connection", socket=>{
             const user = {
                 username: existingUsers[username].userName,
                 displayname: existingUsers[username].displayName,
-                userTodoItems: existingUsers[username].todoItems
+                userTodoItems: existingUsers[username].todoItems,
+                userSettings: existingUsers[username].userSettings
             };
             const isUserAuthorised = bcrypt.compareSync(data.password, hashedPassword);
             socket.emit("user_auth_response", {isUserExist: existingUsersList.includes(username), isUserAuthorised: isUserAuthorised, user: user});
@@ -108,9 +111,20 @@ io.on("connection", socket=>{
         
     });
 
+    socket.off("user_settings_modified", ()=>{}).on("user_settings_modified", data=>{
+        
+        if(data.username === 'Guest'  || data.username.trim().length === 0) return;
+
+        const users = JSON.parse(fs.readFileSync("./Users.json", "utf8"));
+        const user = users[data.username];
+        user.userSettings = data.userSettings;
+        delete users[data.username];
+        const newUsers= {...users, [data.username]: user};
+        fs.writeFileSync("./Users.json", JSON.stringify(newUsers, null, 2)); 
+        
+    });
 });
 
 httpServer.listen(3001, ()=>{
-    console.log("Server is running")
-
+    console.log("Server is running");
 });
