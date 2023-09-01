@@ -53,7 +53,7 @@ io.on("connection", socket=>{
             userName: data.user.username.trim().toLowerCase(),
             displayName: data.user.userDisplayName,
             todoItems: [],
-            userSettings: data.user.userSettings,
+            //userSettings: data.user.userSettings,
             password: hash
         };
 
