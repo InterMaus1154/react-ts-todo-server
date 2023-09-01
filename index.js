@@ -10,7 +10,6 @@ const http = require('http');
 const httpServer = http.createServer(app);
 
 const fs = require('fs');
-const User = require('./User.js')
 
 const {Server} = require("socket.io");
 
@@ -19,7 +18,6 @@ const bcrypt = require('bcrypt');
 
 const io = new Server(httpServer, {
     cors:{
-        origin: "https://verinatodoappbeta.onrender.com/",
         methods: ['GET', 'POST']
     }
 });

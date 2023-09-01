@@ -1,0 +1,44 @@
+{
+  "margit": {
+    "userID": "6b7bda53-bf98-4ae0-98ed-d8390cffa147",
+    "userName": "margit",
+    "displayName": "margit",
+    "todoItems": [],
+    "password": "$2b$10$iAN5uTyK0Sb2VTdBh.35TO.9/dgOanTYA5vFPuTHzXOQww3fECMv.",
+    "userSettings": {
+      "version": "500",
+      "itemAddedPopUp": true,
+      "itemDeletedPopUp": true,
+      "adminTools": false,
+      "interfaceTheme": "light"
+    }
+  },
+  "jancsi": {
+    "userID": "6ba67bcb-9dc7-4509-980a-f30b49dc21c5",
+    "userName": "jancsi",
+    "displayName": "jancsi",
+    "todoItems": [],
+    "password": "$2b$10$3IOy6GREf9WmmQf.6hcmheri2Un8jenhd4rkXF89HEvHQBhejlARK",
+    "userSettings": {
+      "version": "500",
+      "itemAddedPopUp": true,
+      "itemDeletedPopUp": true,
+      "adminTools": false,
+      "interfaceTheme": "light"
+    }
+  },
+  "janos": {
+    "userID": "55566484-dd28-4748-a964-d789044ee89c",
+    "userName": "janos",
+    "displayName": "janos",
+    "todoItems": [],
+    "userSettings": {
+      "version": "500",
+      "itemAddedPopUp": true,
+      "itemDeletedPopUp": true,
+      "adminTools": false,
+      "interfaceTheme": "dark"
+    },
+    "password": "$2b$10$U96T.EXq64MyoqIrLFn1Ve9o4UNk/C6B0ex.zRDayUR3Y4vlfVKQa"
+  }
+}
