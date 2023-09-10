@@ -25,6 +25,8 @@ const io = new Server(httpServer, {
 io.on("connection", socket=>{
     console.log("Connection established");
 
+    socket.emit("connection_established", {});
+
     socket.on("user_is_guest", data =>{
         console.log(socket.id + " is logged in as guest "+data.isGuest);
     });

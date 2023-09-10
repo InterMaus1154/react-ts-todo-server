@@ -31,10 +31,57 @@
     "userID": "55566484-dd28-4748-a964-d789044ee89c",
     "userName": "janos",
     "displayName": "janos",
-    "todoItems": [],
+    "todoItems": [
+      {
+        "id": 672178344298,
+        "name": "fdsfsdfs",
+        "description": "",
+        "category": {
+          "id": 1531564122266,
+          "value": "school",
+          "label": "School"
+        },
+        "date": {
+          "date": "2023-09-24",
+          "allDay": true,
+          "time": ""
+        },
+        "importance": {
+          "name": "Mid",
+          "value": 1,
+          "displayName": "Should be done",
+          "accentColor": "#E6C455",
+          "onHoverText": "Mid level importance grade"
+        },
+        "isCompleted": false
+      },
+      {
+        "id": 25721560839,
+        "name": "dfgdfg",
+        "description": "",
+        "category": {
+          "id": 1531564122266,
+          "value": "school",
+          "label": "School"
+        },
+        "date": {
+          "date": "2023-10-01",
+          "allDay": true,
+          "time": ""
+        },
+        "importance": {
+          "name": "High",
+          "value": 2,
+          "displayName": "Needs to be done at any cost",
+          "accentColor": "#C94D4D",
+          "onHoverText": "High level importance grade"
+        },
+        "isCompleted": false
+      }
+    ],
     "userSettings": {
-      "version": "500",
-      "itemAddedPopUp": true,
+      "version": "510",
+      "itemAddedPopUp": false,
       "itemDeletedPopUp": true,
       "adminTools": false,
       "interfaceTheme": "dark"
