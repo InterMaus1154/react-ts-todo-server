@@ -86,6 +86,54 @@
       "adminTools": false,
       "interfaceTheme": "dark"
     },
-    "password": "$2b$10$U96T.EXq64MyoqIrLFn1Ve9o4UNk/C6B0ex.zRDayUR3Y4vlfVKQa"
+    "password": "$2b$10$U96T.EXq64MyoqIrLFn1Ve9o4UNk/C6B0ex.zRDayUR3Y4vlfVKQa",
+    "userCategories": [
+      {
+        "id": 0,
+        "value": "unknown",
+        "label": "No category"
+      }
+    ]
+  },
+  "mark800": {
+    "userID": "8bc548e6-03bd-4aca-8313-543f211368b4",
+    "userName": "mark800",
+    "displayName": "mark",
+    "todoItems": [],
+    "userSettings": {
+      "version": "500",
+      "itemAddedPopUp": true,
+      "itemDeletedPopUp": true,
+      "adminTools": false,
+      "interfaceTheme": "light"
+    },
+    "userCategories": [
+      {
+        "id": 0,
+        "value": "unknown",
+        "label": "No category"
+      },
+      {
+        "id": 271364553920,
+        "value": "garden",
+        "label": "Garden"
+      },
+      {
+        "id": 6653149968,
+        "value": "house",
+        "label": "House"
+      },
+      {
+        "id": 565577760442,
+        "value": "school",
+        "label": "School"
+      },
+      {
+        "id": 51511577526,
+        "value": "work",
+        "label": "Workplace"
+      }
+    ],
+    "password": "$2b$10$ckgkEzk94oXOj.88TA0k3OTKCitdwXI78JdxxhVpHj1B99M3T9ozG"
   }
 }

@@ -47,6 +47,7 @@ io.on("connection", socket=>{
             displayName: data.user.userDisplayName,
             todoItems: [],
             userSettings: data.user.userSettings,
+            userCategories: data.user.userCategories,
             password: hash
         };
 
@@ -77,7 +78,8 @@ io.on("connection", socket=>{
                 username: existingUsers[username].userName,
                 displayname: existingUsers[username].displayName,
                 userTodoItems: existingUsers[username].todoItems,
-                userSettings: existingUsers[username].userSettings
+                userSettings: existingUsers[username].userSettings,
+                userCategories: existingUsers[username].userCategories
             };
             const isUserAuthorised = bcrypt.compareSync(data.password, hashedPassword);
             socket.emit("user_auth_response", {isUserExist: existingUsersList.includes(username), isUserAuthorised: isUserAuthorised, user: user});
@@ -114,6 +116,18 @@ io.on("connection", socket=>{
         const newUsers= {...users, [data.username]: user};
         fs.writeFileSync("./Users.json", JSON.stringify(newUsers, null, 2)); 
         
+    });
+
+    socket.off("update_user_categories", ()=>{}).on("update_user_categories", data =>{
+
+        if(data.username === 'Guest'  || data.username.trim().length === 0) return;
+
+        const users = JSON.parse(fs.readFileSync("./Users.json", "utf8"));
+        const user = users[data.username]
+        user.userCategories = data.userCategories;
+        delete users[data.username];
+        const newUsers = {...users, [data.username]: user};
+        fs.writeFileSync("./Users.json", JSON.stringify(newUsers, null, 2)); 
     });
 });
 
