@@ -27,74 +27,6 @@
       "interfaceTheme": "light"
     }
   },
-  "janos": {
-    "userID": "55566484-dd28-4748-a964-d789044ee89c",
-    "userName": "janos",
-    "displayName": "janos",
-    "todoItems": [
-      {
-        "id": 672178344298,
-        "name": "fdsfsdfs",
-        "description": "",
-        "category": {
-          "id": 1531564122266,
-          "value": "school",
-          "label": "School"
-        },
-        "date": {
-          "date": "2023-09-24",
-          "allDay": true,
-          "time": ""
-        },
-        "importance": {
-          "name": "Mid",
-          "value": 1,
-          "displayName": "Should be done",
-          "accentColor": "#E6C455",
-          "onHoverText": "Mid level importance grade"
-        },
-        "isCompleted": false
-      },
-      {
-        "id": 25721560839,
-        "name": "dfgdfg",
-        "description": "",
-        "category": {
-          "id": 1531564122266,
-          "value": "school",
-          "label": "School"
-        },
-        "date": {
-          "date": "2023-10-01",
-          "allDay": true,
-          "time": ""
-        },
-        "importance": {
-          "name": "High",
-          "value": 2,
-          "displayName": "Needs to be done at any cost",
-          "accentColor": "#C94D4D",
-          "onHoverText": "High level importance grade"
-        },
-        "isCompleted": false
-      }
-    ],
-    "userSettings": {
-      "version": "510",
-      "itemAddedPopUp": false,
-      "itemDeletedPopUp": true,
-      "adminTools": false,
-      "interfaceTheme": "dark"
-    },
-    "password": "$2b$10$U96T.EXq64MyoqIrLFn1Ve9o4UNk/C6B0ex.zRDayUR3Y4vlfVKQa",
-    "userCategories": [
-      {
-        "id": 0,
-        "value": "unknown",
-        "label": "No category"
-      }
-    ]
-  },
   "mark800": {
     "userID": "8bc548e6-03bd-4aca-8313-543f211368b4",
     "userName": "mark800",
@@ -135,5 +67,168 @@
       }
     ],
     "password": "$2b$10$ckgkEzk94oXOj.88TA0k3OTKCitdwXI78JdxxhVpHj1B99M3T9ozG"
+  },
+  "janos": {
+    "userID": "55566484-dd28-4748-a964-d789044ee89c",
+    "userName": "janos",
+    "displayName": "janos",
+    "todoItems": [
+      {
+        "id": 375763,
+        "name": "gdfgdfgdf",
+        "description": "",
+        "category": {
+          "id": 15485561186,
+          "value": "House",
+          "label": "House"
+        },
+        "date": {
+          "date": "2023-10-01",
+          "allDay": true,
+          "time": ""
+        },
+        "importance": {
+          "name": "Mid",
+          "value": 1,
+          "displayName": "Should be done",
+          "accentColor": "#E6C455",
+          "onHoverText": "Mid level importance grade"
+        },
+        "isCompleted": false
+      },
+      {
+        "id": 692274,
+        "name": "sdgdsgsdg",
+        "description": "",
+        "category": {
+          "id": 15485561186,
+          "value": "House",
+          "label": "House"
+        },
+        "date": {
+          "date": "2023-09-30",
+          "allDay": true,
+          "time": ""
+        },
+        "importance": {
+          "name": "Mid",
+          "value": 1,
+          "displayName": "Should be done",
+          "accentColor": "#E6C455",
+          "onHoverText": "Mid level importance grade"
+        },
+        "isCompleted": false
+      },
+      {
+        "id": 455905,
+        "name": "dfsdfsd",
+        "description": "dsfsdsdf",
+        "category": {
+          "id": 15485561186,
+          "value": "House",
+          "label": "House"
+        },
+        "date": {
+          "date": "2023-10-01",
+          "allDay": true,
+          "time": ""
+        },
+        "importance": {
+          "name": "Low",
+          "value": 0,
+          "displayName": "Not urgent",
+          "accentColor": "#0A4B0A",
+          "onHoverText": "Low level importance grade"
+        },
+        "isCompleted": false
+      },
+      {
+        "id": 922871,
+        "name": "sdfsdf",
+        "description": "",
+        "category": {
+          "id": 15485561186,
+          "value": "House",
+          "label": "House"
+        },
+        "date": {
+          "date": "2023-10-01",
+          "allDay": true,
+          "time": ""
+        },
+        "importance": {
+          "name": "Low",
+          "value": 0,
+          "displayName": "Not urgent",
+          "accentColor": "#0A4B0A",
+          "onHoverText": "Low level importance grade"
+        },
+        "isCompleted": false
+      },
+      {
+        "id": 307967,
+        "name": "sdfsdfsdf",
+        "description": "",
+        "category": {
+          "id": 15485561186,
+          "value": "House",
+          "label": "House"
+        },
+        "date": {
+          "date": "2023-10-01",
+          "allDay": true,
+          "time": ""
+        },
+        "importance": {
+          "name": "High",
+          "value": 2,
+          "displayName": "Needs to be done at any cost",
+          "accentColor": "#C94D4D",
+          "onHoverText": "High level importance grade"
+        },
+        "isCompleted": false
+      },
+      {
+        "id": 433027,
+        "name": "sfdfsdfsd",
+        "description": "",
+        "category": {
+          "id": 15485561186,
+          "value": "House",
+          "label": "House"
+        },
+        "date": {
+          "date": "2023-10-01",
+          "allDay": true,
+          "time": ""
+        },
+        "importance": {
+          "name": "Low",
+          "value": 0,
+          "displayName": "Not urgent",
+          "accentColor": "#0A4B0A",
+          "onHoverText": "Low level importance grade"
+        },
+        "isCompleted": false
+      }
+    ],
+    "userSettings": {
+      "interfaceTheme": "light",
+      "itemAddedPopUp": false,
+      "itemDeletedPopUp": true
+    },
+    "password": "$2b$10$U96T.EXq64MyoqIrLFn1Ve9o4UNk/C6B0ex.zRDayUR3Y4vlfVKQa",
+    "userCategories": [
+      {
+        "id": 0,
+        "value": "unknown",
+        "label": "No category"
+      },
+      {
+        "id": 15485561186,
+        "value": "House",
+        "label": "House"
+      }
+    ]
   }
 }

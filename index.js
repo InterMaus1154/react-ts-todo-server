@@ -89,11 +89,14 @@ io.on("connection", socket=>{
         
     }); 
 
-    socket.off("save_todo_items", ()=>{}).on("save_todo_items", data=>{
+    socket.off("save_todo_items", ()=>{}).on("save_todo_items", data=>{ 
+        if(data.username === undefined){
+            return;
+        }
         const username = data.username;
         const items = data.todoItems;
 
-        const users = JSON.parse(fs.readFileSync("./Users.json", "utf8"));
+        const users = JSON.parse(fs.readFileSync("./Users.json", "utf8")); 
         const user = users[username];
         user.todoItems = items; 
 
@@ -107,7 +110,7 @@ io.on("connection", socket=>{
 
     socket.off("user_settings_modified", ()=>{}).on("user_settings_modified", data=>{
         
-        if(data.username === 'Guest'  || data.username.trim().length === 0) return;
+        if(data.username === 'Guest'  || data.username.trim().length === 0) return;      
 
         const users = JSON.parse(fs.readFileSync("./Users.json", "utf8"));
         const user = users[data.username];
