@@ -5,7 +5,7 @@
   "author": "InterMaus1154 <amarco1154@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "bcrypt": "^5.1.1",
