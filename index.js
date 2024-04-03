@@ -18,6 +18,7 @@ const bcrypt = require('bcrypt');
 
 const io = new Server(httpServer, {
     cors:{
+        origin: "https://verinatodoappbeta.onrender.com/",
         methods: ['GET', 'POST']
     }
 });
